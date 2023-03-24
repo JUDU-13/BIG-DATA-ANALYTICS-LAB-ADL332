@@ -191,3 +191,22 @@ To Call Function -> function_name() Eg: my_function()
 To Call Function With Arguments -> function_name(arg1, arg2, arg3) Eg: my_function(1, 2, 3)
 Function With Return -> function() { // code } Eg: my_function <- function() { return(1) }
 Function As Named Argument -> function_name(arg1=1, arg2=2, arg3=3) Eg: my_function(arg1=1, arg2=2, arg3=3)
+
+## Database Functions
+
+To Connect To Database Using RODBC -> odbcConnect() Eg: my_db <- odbcConnect("my_db") // Need To Install RODBC Package
+Opening a Channel to a Database -> odbcConnect(dsn = "Database_Name", uid = "User_Name", pwd = "Password")
+Data Collection From Database Using SQL Fetch -> sqlFetch() Eg: my_data <- sqlFetch(my_db, "SELECT * FROM my_table")
+Database Connection Close -> odbcClose() Eg: odbcClose(my_db)
+
+To Connect To Database Using DBI -> dbConnect() Eg: my_db <- dbConnect(RSQLite::SQLite(), dbname="my_db") // Need To Install DBI Package
+
+## Special Values
+
+To Assign NA -> NA
+To Assign NaN -> NaN
+To Assign Inf -> Inf
+To Assign -Inf -> -Inf
+
+## Compiling Datasets
+
