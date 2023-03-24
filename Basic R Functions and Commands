@@ -85,6 +85,7 @@ Eigen Values Of Matrix -> eigen(Matrix)
 
 ## Data Frame Functions
 
+To Display Data Frame -> View(Data_Frame) , print(Data_Frame)
 To Make Data Frame -> data.frame() Eg: df <- data.frame(x=1:4 , y=6:9)
 To Extract Specific Column -> df$column_name
 To Extract Specific Row -> df[row_number,]
@@ -146,3 +147,21 @@ To Write Data To CSV File -> write.csv() Eg: write.csv(df, "file_name.csv")
 To Get Working Directory -> getwd()
 To Set Working Directory -> setwd("C:/Users/")
 To Read Text File TXT -> read.table() Eg: df <- read.table("file_name.txt")
+
+## Character Functions
+
+To Assign Character -> c() Eg: my_char <- c("A", "B", "C")
+To Assign Using Factor -> factor() Eg: my_char <- factor(c("A", "B", "C"))
+To Get Length -> length(my_char)
+To Count Number Of Letters -> nchar(my_char)
+
+## Date Functions
+
+To Get Current Date -> Sys.Date()
+To Get Current Time -> Sys.time()
+To Get Current Date and Time -> Sys.time()
+To Set Date -> as.Date() Eg: my_date <- as.Date("2019-01-01")
+
+To Find Data Type -> class(), typeof()
+To Verify Data Type -> is.numeric(), is.character(), is.logical(), is.factor(), is.data.frame(), is.list(), is.matrix(), is.array(), is.vector(), is.null()
+To Convert Data Type -> as.numeric(), as.character(), as.logical(), as.factor(), as.data.frame(), as.list(), as.matrix(), as.array(), as.vector(), as.null()
