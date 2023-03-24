@@ -8,6 +8,8 @@ To Load Packages -> library("Package_Name") , require(Package_Name)
 
 Unload Package -> detach(Package_Name)
 
+To Check Installed Package -> installed.packages()
+
 ## Variables
 
 To Remove Variables -> rm(Object_Name)
