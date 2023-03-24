@@ -1,0 +1,7 @@
+To Install Packages -> install.package("Package Name")
+
+To Uninstall Packages -> remove.packages("Package Name")
+
+To Load Packages -> library("package_name") , require(package_name)
+
+Unload Package -> detach(package name)
