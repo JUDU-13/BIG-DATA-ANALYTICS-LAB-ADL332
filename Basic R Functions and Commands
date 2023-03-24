@@ -13,3 +13,11 @@ To Check Installed Package -> installed.packages()
 ## Variables
 
 To Remove Variables -> rm(Object_Name)
+
+## Data Structures
+
+Vectors -> c() Eg: x <- c(1, 2, 3, 4)
+Matrices -> matrix() Eg: m <- matrix(1:6, nrow=2, ncol=3)
+Arrays -> array() Eg: a <- array(1:24, dim=c(2,3,4))
+Data Frames -> data.frame() Eg: df <- data.frame(x=1:4, y=6:9) , df <- data.frame(name=c("John", "Jane", "Bob"), age=c(25, 30, 35), gender=c("male", "female", "male"))
+Lists -> list() Eg: my_list <- list("apple", 3.14, TRUE)
