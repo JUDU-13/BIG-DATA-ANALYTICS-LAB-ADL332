@@ -1,9 +1,13 @@
-##Package Functions
+## Package Functions
 
-To Install Packages -> install.package("Package Name")
+To Install Packages -> install.package("Package_Name")
 
-To Uninstall Packages -> remove.packages("Package Name")
+To Uninstall Packages -> remove.packages("Package_Name")
 
-To Load Packages -> library("package_name") , require(package_name)
+To Load Packages -> library("Package_Name") , require(Package_Name)
 
-Unload Package -> detach(package name)
+Unload Package -> detach(Package_Name)
+
+## Variables
+
+To Remove Variables -> rm(Object_Name)
