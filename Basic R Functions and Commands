@@ -41,6 +41,7 @@ Product Of Vector -> prod(Vector)
 Minimum Of Vector -> min(Vector)
 Maximum Of Vector -> max(Vector)
 Mean Of Vector -> mean(Vector)
+To Remove NA Values Form Vector and Return Mean -> mean(Vector, na.rm=TRUE)
 Median Of Vector -> median(Vector)
 Mode Of Vector -> mode(Vector)
 Range Of Vector -> range(Vector)
@@ -49,3 +50,35 @@ Standard Deviation Of Vector -> sd(Vector)
 Quantile Of Vector -> quantile(Vector)
 Correlation Of Vector -> cor(Vector)
 Covariance Of Vector -> cov(Vector)
+
+## Sorting Functions
+
+Sort Vector In Ascending Order -> sort(Vector)
+Sort Vector In Descending Order -> rev(sort(Vector))
+Order Vector In Ascending Order -> order(Vector)
+Order Vector In Descending Order -> rev(order(Vector))
+Repeat Vector -> rep(Vector, Times)
+Sequence Vector -> seq(From, To)
+Sequence Vector By Length -> seq(From, To, By)
+Letters Vector -> letters[1:5]
+
+## Matrix Functions
+
+Transpose Of Matrix -> t(Matrix)
+Row Sum Of Matrix -> rowSums(Matrix)
+Row Names -> rownames(Matrix)
+Row Names To Assign -> rownames(Matrix) <- c("Row1", "Row2", "Row3")
+To Remove Row Name -> rownames(Matrix) <- NULL
+Column Sum Of Matrix -> colSums(Matrix)
+Column Names To Assign -> colnames(Matrix) <- c("Col1", "Col2", "Col3")
+Column Names -> colnames(Matrix)
+To Remove Column Name -> colnames(Matrix) <- NULL
+To Combine Two Matrix -> rbind(Matrix1, Matrix2) // Row Bind
+To Combine Two Matrix -> cbind(Matrix1, Matrix2) // Column Bind
+To Add A Single Row -> rbind(Matrix, c(1, 2, 3))
+To Add A Single Column -> cbind(Matrix, c(1, 2, 3))
+To Multiply Two Matrix -> Matrix1 %*% Matrix2
+Crossproduct -> crossprod(Matrix)
+Determinant Of Matrix -> det(Matrix)
+Inverse Of Matrix -> solve(Matrix)
+Eigen Values Of Matrix -> eigen(Matrix)
