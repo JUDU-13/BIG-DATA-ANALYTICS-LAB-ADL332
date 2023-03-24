@@ -21,3 +21,31 @@ Matrices -> matrix() Eg: m <- matrix(1:6, nrow=2, ncol=3)
 Arrays -> array() Eg: a <- array(1:24, dim=c(2,3,4))
 Data Frames -> data.frame() Eg: df <- data.frame(x=1:4, y=6:9) , df <- data.frame(name=c("John", "Jane", "Bob"), age=c(25, 30, 35), gender=c("male", "female", "male"))
 Lists -> list() Eg: my_list <- list("apple", 3.14, TRUE)
+
+## Mathematical Functions
+
+Absolute Value Of Number -> abs(Number)
+Square Root Of Number -> sqrt(Number)
+Exponential Of Number -> exp(Number)
+Logarithm Of Number -> log(Number)
+Factorial Of Number -> factorial(Number)
+Ceiling Of Number -> ceiling(Number)
+Floor Of Number -> floor(Number)
+Round Of Number -> round(Number)
+To Find Missing Values -> is.na(Object_Name)
+Sum Of Vector -> sum(Vector)
+Product Of Vector -> prod(Vector)
+
+## Statistical Functions
+
+Minimum Of Vector -> min(Vector)
+Maximum Of Vector -> max(Vector)
+Mean Of Vector -> mean(Vector)
+Median Of Vector -> median(Vector)
+Mode Of Vector -> mode(Vector)
+Range Of Vector -> range(Vector)
+Variance Of Vector -> var(Vector)
+Standard Deviation Of Vector -> sd(Vector)
+Quantile Of Vector -> quantile(Vector)
+Correlation Of Vector -> cor(Vector)
+Covariance Of Vector -> cov(Vector)
