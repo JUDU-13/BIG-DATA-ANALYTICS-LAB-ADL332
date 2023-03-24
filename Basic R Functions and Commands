@@ -82,3 +82,67 @@ Crossproduct -> crossprod(Matrix)
 Determinant Of Matrix -> det(Matrix)
 Inverse Of Matrix -> solve(Matrix)
 Eigen Values Of Matrix -> eigen(Matrix)
+
+## Data Frame Functions
+
+To Make Data Frame -> data.frame() Eg: df <- data.frame(x=1:4 , y=6:9)
+To Extract Specific Column -> df$column_name
+To Extract Specific Row -> df[row_number,]
+To Extract Specific Element -> df[row_number, column_number]
+To Extract Specific Element -> df[row_number, "column_name"]
+To Attach -> attach(Data_Frame)
+To Inspect The Structure -> str(Data_Frame)
+To Detach -> detach(Data_Frame)
+To Get Summary -> summary(Data_Frame)
+To Get Subset -> subset(Data_Frame, condition)
+To Slipt Data Frame -> split(Data_Frame, by=column_name)
+To Get Head -> head(Data_Frame)
+To Get Tail -> tail(Data_Frame)
+To Get Dimension -> dim(Data_Frame)
+
+## List Functions
+
+To Make List -> list() Eg: my_list <- list("apple", 3.14, TRUE)
+To Extract Specific Element -> my_list[[1]]
+To Extract Specific Element -> my_list[1]
+To Get Dimension -> dim(my_list)
+
+## Graphs
+
+To Plot Graph -> polt() Eg: plot(x, y, type="p", main="Title", xlab="X Label", ylab="Y Label", col="red")
+
+### Bar Graph
+
+To Polt Bar Graph -> barplot() Eg: barplot(height, names.arg=c("A", "B", "C"), main="Title", xlab="X Label", ylab="Y Label", col="red")
+To Polt Bar Graph Using Table -> barplot() Eg: barplot(table(Data_Frame$column_name), main="Title", xlab="X Label", ylab="Y Label", col="red")
+To Give Title -> title("Title")
+To Give X Label -> xlab("X Label")
+To Give Y Label -> ylab("Y Label")
+To Give Colour To a Bar -> col="red"
+
+### Pie Chart
+
+To Plot Pie Chart -> pie() Eg: pie(height, labels=c("A", "B", "C"), main="Title", col="red")
+To Plot Pie Chart Using Table -> pie() Eg: pie(table(Data_Frame$column_name), main="Title", col="red")
+To Give Name -> pie(t,c("A", "B", "C"), main="Title", col="red")
+To Give Colour -> pie(t,c("A", "B", "C"), main="Title", col=c("red", "green", "blue"))
+3D Pie Chart -> pie3D() Eg: pie3D(height, labels=c("A", "B", "C"), main="Title", col="red") // Need to Install Poltrix Package
+
+### Histogram
+
+To Plot Histogram -> hist() Eg: hist(Data_Frame$column_name, main="Title", xlab="X Label", ylab="Y Label", col="red")
+Limt of X Axis -> xlim(0, 100)
+Limit of Y Axis -> ylim(0, 100)
+To Give Colour -> hist(Data_Frame$column_name, main="Title", xlab="X Label", ylab="Y Label", col="red")
+
+##Fitting Linear Model through Least Square Method
+
+To Fit Linear Model -> lm() Eg: model <- lm(y~x, data=Data_Frame)
+
+## Importing and Exporting Data
+
+To Import Data From CSV File -> read.csv() Eg: df <- read.csv("file_name.csv")
+To Write Data To CSV File -> write.csv() Eg: write.csv(df, "file_name.csv")
+To Get Working Directory -> getwd()
+To Set Working Directory -> setwd("C:/Users/")
+To Read Text File TXT -> read.table() Eg: df <- read.table("file_name.txt")
