@@ -165,3 +165,29 @@ To Set Date -> as.Date() Eg: my_date <- as.Date("2019-01-01")
 To Find Data Type -> class(), typeof()
 To Verify Data Type -> is.numeric(), is.character(), is.logical(), is.factor(), is.data.frame(), is.list(), is.matrix(), is.array(), is.vector(), is.null()
 To Convert Data Type -> as.numeric(), as.character(), as.logical(), as.factor(), as.data.frame(), as.list(), as.matrix(), as.array(), as.vector(), as.null()
+
+## Control Statements
+
+If Statement -> if(condition) { // code } Eg: if(1 > 2) { print("A") }
+
+If Else Statement -> if(condition) { // code } else { // code } Eg: if(1 > 2) { print("A") } else { print("B") }
+
+If Else If Statement -> if(condition) { // code } else if(condition) { // code } else { // code } Eg: if(1 > 2) { print("A") } else if(1 < 2) { print("B") } else { print("C") }
+
+Switch Statement -> switch(condition, case1, case2, case3) Eg: switch(1, "A", "B", "C")
+
+For Loop -> for(i in 1:10) { // code } Eg: for(i in 1:10) { print(i) }
+
+For Loop with Sequence -> for(i in seq(1, 10, by=2)) { // code } Eg: for(i in seq(1, 10, by=2)) { print(i) }
+
+While Loop -> while(condition) { // code } Eg: while(i < 10) { print(i) i <- i + 1 }
+
+Repeat Loop -> repeat { // code } Eg: repeat { print("Hello") }
+
+## Functions
+
+To Make Function -> function() { // code } Eg: my_function <- function() { // code }
+To Call Function -> function_name() Eg: my_function()
+To Call Function With Arguments -> function_name(arg1, arg2, arg3) Eg: my_function(1, 2, 3)
+Function With Return -> function() { // code } Eg: my_function <- function() { return(1) }
+Function As Named Argument -> function_name(arg1=1, arg2=2, arg3=3) Eg: my_function(arg1=1, arg2=2, arg3=3)
