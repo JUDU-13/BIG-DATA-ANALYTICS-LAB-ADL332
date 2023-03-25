@@ -35,6 +35,8 @@ Round Of Number -> round(Number)
 To Find Missing Values -> is.na(Object_Name)
 Sum Of Vector -> sum(Vector)
 Product Of Vector -> prod(Vector)
+To Get Cumulative Sum -> cumsum()
+To Get Cumulative Product -> cumprod()
 
 ## Statistical Functions
 
