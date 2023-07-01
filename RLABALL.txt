@@ -1,0 +1,240 @@
+MIN MAX
+lst=c()
+i=1
+n=as.integer(readline("Enter the number of terms : "))
+print(paste("Enter",n,"numbers"))
+while (i<=n){
+  x=as.integer(readline())
+  lst[i]=x
+  i=i+1
+}
+print(paste("Maximum = ",max(lst)))
+print(paste("Minimum = ",min(lst)))
+
+
+FACT&PALIN
+n=as.integer(readline("Enter the number : "))
+i=1L
+fact=1L
+while(i<=n){
+  fact=fact*i
+  i=i+1
+}
+#Palindrome check
+j=0
+rev=0
+f=fact
+while(j<nchar(fact)){
+  x=f%%10
+  rev=rev*10+x
+  j=j+1
+  f=as.integer(f/10)
+}
+print(paste("Factorial of",n,"is",fact))
+if (fact==rev) print(paste(fact,"is a palindrome"))else print(paste(fact,"is not palindrome"))
+
+PASCAL
+n=as.integer(readline("Enter the depth : "))
+for(i in 1:n)
+{
+  cat(rep("",n-i+1))
+  num=1
+  for(j in 1:n)
+  {
+    if(num!=0)
+    {
+      cat(num," ")
+    }
+    num=num*(i-j)/j
+  }
+  cat("\n")
+}
+
+NTH ELEMENT
+nums=c(1:20)
+n=as.integer(readline("Enter the value of n : "))
+i=n
+while (i<=length(nums))
+{
+  print(nums[i])
+  i=i+n
+}
+
+2ND POS
+n<-c(24,56,57)
+for(i in (length(n)+1):3)
+{
+  n[i]=n[i-1]
+}
+n[2]=23
+print(n)
+
+NTH POS LARGEST
+nums=c(12,8,6,7,9,16)
+for (i in 1:(length(nums)-1))
+{
+  for(j in (i+1):length(nums))
+  {
+    if(nums[i]<nums[j]){
+      temp=nums[i]
+      nums[i]=nums[j]
+      nums[j]=temp
+    }
+  }
+}
+n=as.integer(readline("Enter the value of n : "))
+print(paste(n,"th largest element is",nums[n]))
+
+BINDING
+year=c(1998,1997,2002,2004)
+name=c("Amal","Binu","Jaya","Cathy")
+print("Row wise Binding")
+print(rbind(name,year))
+print("Column wise Binding")
+print(cbind(name,year))
+
+MERGE DATAFRAME
+authors=data.frame(Name=c("Alan","Ajo","Kenny","Karan","Luca"),
+                   Nationality=c("USA","UK","INDIA","UAE","INDIA"))
+books=data.frame(Author=c("Ajo","Kenny","Luca"),
+                 Title=c("Python","C++","R"))
+print("Author Details")
+print(authors)
+print("Books Details")
+print(books)
+print("Books with author Details")
+print(merge(authors,books,by.x="Name",by.y="Author"))
+
+TRANSFORM
+details=data.frame(Name=c("Alan","Ajo","Kenny","Karan","Luca"),
+                    Weight=c(80,70,60,65,72))
+new_details=transform(details,Weight=Weight+3)
+print(new_details)
+
+APPLY
+df=data.frame(x=1:5,y=6:10,z=11:15)
+print(df)
+print("Row wise sum")
+print(apply(df,1,FUN=sum))
+print("Column wise sum")
+print(apply(df,2,FUN=sum))
+
+#list or vector
+ls=1:5
+print("Powers of 2")
+print(lapply(ls,function(x)2^x))
+
+LINEAR REG
+x=c(179, 163, 152, 131,151, 170, 138, 180, 128, 136)
+y=c(76,72, 62, 48,63, 81, 56, 87, 47, 57)
+model=lm(y~x)
+a=as.integer(readline("Enter the height of the individual: "))
+a=data.frame(x=a)
+result=predict(model,a)
+cat("The predicted weight is ",result)
+plot(x,y,col = "red",main = "Linear Regression",
+     abline(model),cex = 1.3,pch = 16,xlab = "Weight in Kg",ylab = "Height in cm")
+
+LOGISTIC REG
+library(MASS)
+library(caret)
+data(biopsy)
+
+f1<-as.integer(readline("Enter the value for feature1:"))
+f2<-as.integer(readline("Enter the value for feature2:"))
+f3<-as.integer(readline("Enter the value for feature3:"))
+test<-data.frame(V1=f1,V2=f2,V3=f3)
+set.seed(123)
+b_model<-glm(class~V1+V2+V3,data=biopsy,family = "binomial")
+pred<-predict(b_model,newdata=test,type="response")
+res<-ifelse(pred>0.5,"Malignant","Benign")
+cat("The tumor is",res)5
+
+DESICION TREE
+library(MASS)
+library(caret)
+library(rpart)
+library(rpart.plot)
+data(biopsy)
+set.seed(29)
+split=createDataPartition(biopsy$class, p = .7,list = FALSE,times = 1)
+train=biopsy[split,]
+test=biopsy[-split,]
+model=rpart(class ~V1+V3+V5+V6,data = train, method = "class")
+rpart.plot(model)
+predictions=predict(model, test, type = "class")
+cm=(confusionMatrix(test$class,predictions))$table
+print("Confusion Matrix ")
+print(cm)
+cat("Accuracy=",(cm[1]+cm[4])/nrow(test))
+
+SVM
+library(caret)
+library(e1071)
+data(iris)
+set.seed(121)
+split=createDataPartition(iris$Species, p = .7,list = FALSE,times = 1)
+train=iris[split,]
+test=iris[-split,]
+train[-5]=scale(train[-5])
+test[-5]=scale(test[-5])
+classifier = svm(formula = Species ~ .,
+                 data = train,
+                 type = 'C-classification',
+                 kernel = 'linear')
+predictions=predict(classifier, test[-5], type = "class")
+cm=(confusionMatrix(test$Species,predictions))$table
+print("Confusion Matrix ")
+print(cm)
+cat("Accuracy=",(sum(diag(cm))/sum(cm)))
+
+KMEANS
+library(ggfortify)
+data(iris)
+k= 3
+model=kmeans(iris[-5], centers = k)
+print(autoplot(model,iris[-5],frame=T))
+
+HIRECAL CLUS
+data(iris)
+data=rbind(iris[10:15, 3:4],iris[60:65, 3:4],iris[101:106, 3:4])
+clusters=hclust(dist(data))
+plot(clusters)
+
+DBSCAN
+library("fpc")
+library("factoextra")
+data("multishapes", package = "factoextra")
+df <- multishapes[, 1:2]
+set.seed(123)
+db <- fpc::dbscan(df, eps = 0.15, MinPts = 5)
+plot(db, df, main = "DBSCAN", frame = FALSE)
+
+STATCIAL
+data(mtcars)
+data(iris)
+print(t.test(mtcars$mpg, y=NULL)) # One sample
+
+print(t.test(mpg ~ cyl, data = mtcars, subset = cyl %in% c(4, 6))) # Two sample
+
+print(t.test(mtcars$mpg, mtcars$am, data = mtcars, paired = T)) # Paired t-test
+
+print(aov(mpg ~ cyl, data = mtcars)) # ANOVA Test
+
+print(shapiro.test(mtcars$wt)) # Shapiro Normality Test
+
+print(ks.test(mtcars$wt, mtcars$disp)) # Kolmogorov-Smirnov test
+
+print(kruskal.test(mpg ~ am, data = mtcars)) # Kruskal Test
+
+print(wilcox.test(iris$Sepal.Length)) # Wilcoxon Test
+
+print(fligner.test(mtcars$mpg, mtcars$am)) # Flinger Test
+
+print(ansari.test(rnorm(20), rnorm(10, 0, 5), conf.int = T))
+
+smokers  <- c(83, 90, 129, 70)
+patients <- c(86, 93, 136, 82)
+print(prop.test(smokers, patients)) # Proposition Test
+
+print(binom.test(64, 100, 0.5)) # Binomial Test
